@@ -94,6 +94,7 @@
         left: 0;
         top: 0;
         bottom: auto;
+        background-color: var(--secondary-bg);
         border-right: 1px solid var(--divider-color);
         border-top: none;
         padding: 1.5rem 0;
