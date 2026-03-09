@@ -1,0 +1,116 @@
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.upcoming-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--secondary-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.upcoming-item:hover {
+    transform: translateY(-5px);
+}
+
+.upcoming-image-container {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.blurred-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px) brightness(0.6);
+    transform: scale(1.1);
+    /* Prevents blur bleeding at edges */
+    transition: filter 0.5s ease;
+}
+
+.upcoming-item:hover .blurred-image {
+    filter: blur(8px) brightness(0.7);
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--accent-color);
+    padding: 1rem 2rem;
+    background-color: rgba(13, 13, 13, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.coming-soon-badge span {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.upcoming-info {
+    width: 50%;
+    padding: 2rem 3rem 2rem 0;
+}
+
+.upcoming-info h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.project-date {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.notify-btn {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    border: 1px solid var(--divider-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notify-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+@media (max-width: 768px) {
+    .upcoming-item {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .upcoming-image-container,
+    .upcoming-info {
+        width: 100%;
+    }
+
+    .upcoming-info {
+        padding: 2rem;
+        text-align: center;
+    }
+}

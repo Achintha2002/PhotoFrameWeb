@@ -1,0 +1,109 @@
+:root {
+  --primary-bg: #0d0d0d;
+  --secondary-bg: #141414;
+  --text-main: #fcfcfc;
+  --text-muted: #888888;
+  --accent-color: #9d4edd;
+  /* A vibrant, elegant purple accent */
+  --divider-color: #2a2a2a;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-handwriting: 'Dancing Script', cursive;
+  --nav-width: 280px;
+}
+
+[data-theme='light'] {
+  --primary-bg: #ffffff;
+  --secondary-bg: #ffffff;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --divider-color: #e9ecef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-bg);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Animations & Transitions */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout Setup */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--nav-width);
+  /* Push content past the sidebar */
+  padding: 3rem 5rem;
+  background-color: var(--primary-bg);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 80px;
+    /* Space for bottom nav on mobile */
+    padding: 2rem 1.5rem;
+  }
+}

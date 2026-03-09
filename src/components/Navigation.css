@@ -1,0 +1,136 @@
+.side-nav {
+    width: var(--nav-width);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--secondary-bg);
+    border-right: 1px solid var(--divider-color);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    z-index: 100;
+}
+
+.nav-header {
+    margin-bottom: 4rem;
+}
+
+.logo {
+    font-family: var(--font-handwriting);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    color: var(--text-muted);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-main);
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 0 4px 4px 0;
+}
+
+.nav-footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.theme-toggle-btn-inline {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .side-nav {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        border-right: none;
+        border-top: 1px solid var(--divider-color);
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-header,
+    .nav-footer {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        font-size: 0.75rem;
+        gap: 0.3rem;
+    }
+
+    .nav-link:hover {
+        transform: none;
+    }
+
+    .nav-link.active::before {
+        display: none;
+    }
+
+    .nav-link.active {
+        color: var(--accent-color);
+    }
+}
