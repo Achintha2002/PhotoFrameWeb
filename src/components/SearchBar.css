@@ -52,14 +52,18 @@
         justify-content: flex-end;
         margin-bottom: 1rem;
         position: absolute;
-        top: 1rem;
+        top: 1.5rem;
         right: 1.5rem;
-        width: auto;
+        width: calc(100% - 60px - 3rem);
+        /* Full width minus sidebar and padding */
+        max-width: 250px;
         z-index: 50;
     }
 
     .search-form {
-        max-width: 200px;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
     }
 
     .search-input {
