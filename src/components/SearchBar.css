@@ -49,31 +49,11 @@
 
 @media (max-width: 768px) {
     .search-container {
-        justify-content: flex-end;
-        margin-bottom: 1rem;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        width: calc(100% - 60px - 3rem);
-        /* Full width minus sidebar and padding */
-        max-width: 250px;
-        z-index: 50;
+        justify-content: center;
+        margin-bottom: 1.5rem;
     }
 
     .search-form {
-        width: 100%;
         max-width: 100%;
-        margin-left: auto;
-    }
-
-    .search-input {
-        padding: 0.6rem 1rem 0.6rem 2.5rem;
-        font-size: 0.85rem;
-    }
-
-    .search-icon {
-        left: 0.8rem;
-        width: 16px;
-        height: 16px;
     }
 }
