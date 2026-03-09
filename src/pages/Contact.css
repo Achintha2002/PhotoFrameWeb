@@ -136,9 +136,9 @@
 }
 
 .social-icon:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-bg);
-    border-color: var(--accent-color);
+    background-color: #FFC0CB;
+    color: #FFC0CB;
+    border-color: #FFC0CB;
     transform: translateY(-3px);
 }
 
