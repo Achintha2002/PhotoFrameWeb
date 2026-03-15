@@ -136,9 +136,9 @@
 }
 
 .social-icon:hover {
-    background-color: #FFC0CB;
-    color: #FFC0CB;
-    border-color: #FFC0CB;
+    background-color: #d73dc8;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
     transform: translateY(-3px);
 }
 
